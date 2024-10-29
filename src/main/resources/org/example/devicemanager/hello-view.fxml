@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<AnchorPane fx:controller="org.example.devicemanager.HelloController"
+            xmlns:fx="http://javafx.com/fxml" xmlns="http://javafx.com/javafx">
+    <children>
+        <TabPane fx:id="tabPane">
+            <tabs>
+                <Tab text="Smartphone">
+                    <VBox>
+                        <TextField fx:id="nameField" promptText="Name"/>
+                        <TextField fx:id="priceField" promptText="Price"/>
+                        <TextField fx:id="weightField" promptText="Weight"/>
+                        <TextField fx:id="screenSizeField" promptText="Screen Size"/>
+                        <TextField fx:id="cameraResolutionField" promptText="Camera Resolution"/>
+                        <Button text="Add Smartphone" onAction="#addSmartphone"/>
+                    </VBox>
+                </Tab>
+                <Tab text="Laptop">
+                    <VBox>
+                        <TextField fx:id="nameField" promptText="Name"/>
+                        <TextField fx:id="priceField" promptText="Price"/>
+                        <TextField fx:id="weightField" promptText="Weight"/>
+                        <TextField fx:id="ramSizeField" promptText="RAM Size"/>
+                        <TextField fx:id="processorTypeField" promptText="Processor Type"/>
+                        <Button text="Add Laptop" onAction="#addLaptop"/>
+                    </VBox>
+                </Tab>
+                <Tab text="Tablet">
+                    <VBox>
+                        <TextField fx:id="nameField" promptText="Name"/>
+                        <TextField fx:id="priceField" promptText="Price"/>
+                        <TextField fx:id="weightField" promptText="Weight"/>
+                        <TextField fx:id="batteryLifeField" promptText="Battery Life"/>
+                        <CheckBox fx:id="hasStylusCheckbox" text="Has Stylus"/>
+                        <Button text="Add Tablet" onAction="#addTablet"/>
+                    </VBox>
+                </Tab>
+            </tabs>
+        </TabPane>
+
+        <ListView fx:id="listView" />
+        <Button text="Remove Selected" onAction="#removeSelectedDevice"/>
+    </children>
+</AnchorPane>
